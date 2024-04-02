@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<pragma once="true" />
+
+	<files id="haxe">
+		<compilerflag value="-I${haxelib:unrar}/lib" unless="linux" />
+	</files>
+
+	<files id="__main__">
+		<compilerflag value="-I${haxelib:unrar}/lib" unless="linux" />
+	</files>
+
+	<target id="haxe">
+		<lib if="HXCPP_M64" name="${haxelib:unrar}/lib/UnRAR64.lib" />
+		<lib if="HXCPP_M32" name="${haxelib:unrar}/lib/UnRAR.lib" />
+	</target>
+
+	<section unless="lime">
+		<section if="windows">
+			<copyFile if="HXCPP_M64" name="UnRAR64.dll" from="${haxelib:unrar}/lib" />
+			<copyFile if="HXCPP_M32" name="UnRAR.dll" from="${haxelib:unrar}/lib" />
+		</section>
+	</section>
+</xml>

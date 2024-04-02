@@ -1,0 +1,4 @@
+--main Test
+-D UNRAR_SUPPORTED
+--library unrar
+--cpp bin/
