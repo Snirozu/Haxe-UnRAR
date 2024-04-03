@@ -1,6 +1,6 @@
 package unrar;
 
-#if (!cpp && !windows)
+#if !(cpp && windows)
 #error "UnRAR only supports C++ Windows targets!"
 #end
 

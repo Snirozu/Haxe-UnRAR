@@ -1,5 +1,6 @@
 {
     "name": "UnRAR",
+    "description": "Haxe C++ native externs for UnRAR",
     "license": "Apache",
     "releasenote": "",
     "contributors": [
